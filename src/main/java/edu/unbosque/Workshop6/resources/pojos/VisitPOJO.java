@@ -1,5 +1,8 @@
 package edu.unbosque.Workshop6.resources.pojos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class VisitPOJO {
 
     private int id;
@@ -8,6 +11,9 @@ public class VisitPOJO {
     private String description;
     private int veterinaryId;
     private int petId;
+    private List<VisitPOJO> visitPOJOList= new ArrayList<>();
+
+    public VisitPOJO(){}
 
     public VisitPOJO(int id, String createdAt, String type, String description, int veterinaryId, int petId) {
         this.id = id;
@@ -64,5 +70,13 @@ public class VisitPOJO {
 
     public void setPetId(int petId) {
         this.petId = petId;
+    }
+
+    public List<VisitPOJO> getVisitPOJOList() {
+        return visitPOJOList;
+    }
+
+    public void setVisitPOJOList(List<VisitPOJO> visitPOJOList) {
+        this.visitPOJOList = visitPOJOList;
     }
 }

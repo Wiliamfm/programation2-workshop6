@@ -8,6 +8,8 @@ public class CasePOJO {
     private String description;
     private int petId;
 
+    public CasePOJO(){}
+
     public CasePOJO(int id, String createdAt, String type, String description, int petId) {
         this.id = id;
         this.createdAt = createdAt;

@@ -5,6 +5,8 @@ public class OfficialPOJO {
     private String username;
     private String name;
 
+    public OfficialPOJO(){}
+
     public OfficialPOJO(String username, String name) {
         this.username = username;
         this.name = name;

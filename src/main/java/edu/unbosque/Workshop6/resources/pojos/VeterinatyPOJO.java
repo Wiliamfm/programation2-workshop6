@@ -7,6 +7,8 @@ public class VeterinatyPOJO {
     private String address;
     private String neighborhood;
 
+    public VeterinatyPOJO(){}
+
     public VeterinatyPOJO(String username, String name, String address, String neighborhood) {
         this.username = username;
         this.name = name;

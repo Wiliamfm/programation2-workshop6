@@ -1,5 +1,8 @@
 package edu.unbosque.Workshop6.resources.pojos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PetPOJO {
 
     private int id;
@@ -10,9 +13,13 @@ public class PetPOJO {
     private String size;
     private String sex;
     private String picture;
-    private int ownerId;
+    private ProprietaryPOJO owner;
+    private ArrayList<CasePOJO> casePOJOList = new ArrayList<>();
+    private List<VisitPOJO> visitPOJOList= new ArrayList<>();
 
-    public PetPOJO(int id, String microship, String name, String specie, String race, String size, String sex, String picture, int ownerId) {
+    public PetPOJO(){}
+
+    public PetPOJO(int id, String microship, String name, String specie, String race, String size, String sex, String picture, ProprietaryPOJO owner) {
         this.id = id;
         this.microship = microship;
         this.name = name;
@@ -21,7 +28,7 @@ public class PetPOJO {
         this.size = size;
         this.sex = sex;
         this.picture = picture;
-        this.ownerId = ownerId;
+        this.owner= owner;
     }
 
     public int getId() {
@@ -88,11 +95,27 @@ public class PetPOJO {
         this.picture = picture;
     }
 
-    public int getOwnerId() {
-        return ownerId;
+    public ProprietaryPOJO getOwner() {
+        return owner;
     }
 
-    public void setOwnerId(int ownerId) {
-        this.ownerId = ownerId;
+    public void setOwner(ProprietaryPOJO owner) {
+        this.owner = owner;
+    }
+
+    public ArrayList<CasePOJO> getCasePOJOList() {
+        return casePOJOList;
+    }
+
+    public void setCasePOJOList(ArrayList<CasePOJO> casePOJOList) {
+        this.casePOJOList = casePOJOList;
+    }
+
+    public List<VisitPOJO> getVisitPOJOList() {
+        return visitPOJOList;
+    }
+
+    public void setVisitPOJOList(List<VisitPOJO> visitPOJOList) {
+        this.visitPOJOList = visitPOJOList;
     }
 }

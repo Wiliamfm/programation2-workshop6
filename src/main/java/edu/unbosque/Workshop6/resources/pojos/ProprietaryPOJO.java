@@ -1,5 +1,7 @@
 package edu.unbosque.Workshop6.resources.pojos;
 
+import java.util.ArrayList;
+
 public class ProprietaryPOJO {
 
     private String username;
@@ -7,6 +9,9 @@ public class ProprietaryPOJO {
     private String name;
     private String address;
     private String neighborhood;
+    private ArrayList<PetPOJO> pets= new ArrayList<>();
+
+    public ProprietaryPOJO(){}
 
     public ProprietaryPOJO(String username, int id, String name, String address, String neighborhood) {
         this.username = username;
@@ -54,5 +59,13 @@ public class ProprietaryPOJO {
 
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
+    }
+
+    public ArrayList<PetPOJO> getPets() {
+        return pets;
+    }
+
+    public void setPets(ArrayList<PetPOJO> pets) {
+        this.pets = pets;
     }
 }
