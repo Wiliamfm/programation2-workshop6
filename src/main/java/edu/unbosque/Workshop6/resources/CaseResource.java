@@ -7,7 +7,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/cases")
+@Path("/proprietary/{id}/pets/{id}/cases")
 public class CaseResource {
 
     private Data data= new Data();

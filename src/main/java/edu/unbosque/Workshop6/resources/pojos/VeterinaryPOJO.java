@@ -1,19 +1,24 @@
 package edu.unbosque.Workshop6.resources.pojos;
 
-public class VeterinatyPOJO {
+import java.util.ArrayList;
+import java.util.List;
+
+public class VeterinaryPOJO {
 
     private String username;
     private String name;
     private String address;
     private String neighborhood;
+    private List<VisitPOJO> visitPOJOList= new ArrayList<>();
 
-    public VeterinatyPOJO(){}
+    public VeterinaryPOJO(){}
 
-    public VeterinatyPOJO(String username, String name, String address, String neighborhood) {
+    public VeterinaryPOJO(String username, String name, String address, String neighborhood, List<VisitPOJO> visitPOJOList) {
         this.username = username;
         this.name = name;
         this.address = address;
         this.neighborhood = neighborhood;
+        this.visitPOJOList= visitPOJOList;
     }
 
     public String getUsername() {
@@ -46,5 +51,13 @@ public class VeterinatyPOJO {
 
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
+    }
+
+    public List<VisitPOJO> getVisitPOJOList() {
+        return visitPOJOList;
+    }
+
+    public void setVisitPOJOList(List<VisitPOJO> visitPOJOList) {
+        this.visitPOJOList = visitPOJOList;
     }
 }

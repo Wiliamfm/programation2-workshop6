@@ -57,6 +57,7 @@ public class ProprietaryResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response modify(@PathParam("id") int id, ProprietaryPOJO proprietaryPOJO){
+        proprietaryPOJO.setId(id);
         return Response.status(Response.Status.OK).entity(proprietaryPOJO).build();
     }
 }

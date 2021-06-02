@@ -9,19 +9,20 @@ public class VisitPOJO {
     private String createdAt;
     private String type;
     private String description;
-    private int veterinaryId;
+    private String veterinaryId;
     private int petId;
-    private List<VisitPOJO> visitPOJOList= new ArrayList<>();
+    private String microship;
 
     public VisitPOJO(){}
 
-    public VisitPOJO(int id, String createdAt, String type, String description, int veterinaryId, int petId) {
+    public VisitPOJO(int id, String createdAt, String type, String description, String veterinaryId, int petId, String microship) {
         this.id = id;
         this.createdAt = createdAt;
         this.type = type;
         this.description = description;
         this.veterinaryId = veterinaryId;
         this.petId = petId;
+        this.microship = microship;
     }
 
     public int getId() {
@@ -56,11 +57,11 @@ public class VisitPOJO {
         this.description = description;
     }
 
-    public int getVeterinaryId() {
+    public String getVeterinaryId() {
         return veterinaryId;
     }
 
-    public void setVeterinaryId(int veterinaryId) {
+    public void setVeterinaryId(String veterinaryId) {
         this.veterinaryId = veterinaryId;
     }
 
@@ -72,11 +73,11 @@ public class VisitPOJO {
         this.petId = petId;
     }
 
-    public List<VisitPOJO> getVisitPOJOList() {
-        return visitPOJOList;
+    public String getMicroship() {
+        return microship;
     }
 
-    public void setVisitPOJOList(List<VisitPOJO> visitPOJOList) {
-        this.visitPOJOList = visitPOJOList;
+    public void setMicroship(String microship) {
+        this.microship = microship;
     }
 }

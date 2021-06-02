@@ -8,6 +8,8 @@ public class Data {
     private List<ProprietaryPOJO> proprietaryPOJOList= new ArrayList<>();
     private List<PetPOJO> petPOJOList= new ArrayList<>();
     private List<CasePOJO> casePOJOList= new ArrayList<>();
+    private List<VeterinaryPOJO> veterinaryPOJOList= new ArrayList<>();
+    private List<VisitPOJO> visitPOJOList= new ArrayList<>();
 
     public void setProprietaries(){
         proprietaryPOJOList.add(new ProprietaryPOJO("Username1", 0, "name1", "address1", "neighborhood1"));
@@ -28,10 +30,10 @@ public class Data {
     }
 
     public void setPets(){
-        petPOJOList.add(new PetPOJO(0, "microship1", "name1", "species1", "race1", "size1", "sex1", "picture1", new ProprietaryPOJO("Username1", 1, "name1", "address1", "neighborhood1")));
-        petPOJOList.add(new PetPOJO(1, "microship2", "name2", "species2", "race2", "size2", "sex2", "picture2", new ProprietaryPOJO("Username1", 1, "name1", "address1", "neighborhood1")));
-        petPOJOList.add(new PetPOJO(2, "microship3", "name3", "species3", "race3", "size3", "sex3", "picture3", new ProprietaryPOJO("Username2", 2, "name2", "address2", "neighborhood2")));
-        petPOJOList.add(new PetPOJO(3, "microship4", "name4", "species4", "race4", "size4", "sex4", "picture4", new ProprietaryPOJO("Username3", 3, "name3", "address3", "neighborhood3")));
+        petPOJOList.add(new PetPOJO(0, "microship1", "name1", "species1", "race1", "size1", "sex1", "../photos/pet1.jpg", new ProprietaryPOJO("Username1", 1, "name1", "address1", "neighborhood1")));
+        petPOJOList.add(new PetPOJO(1, "microship2", "name2", "species2", "race2", "size2", "sex2", "../photos/pet2.jpg", new ProprietaryPOJO("Username1", 1, "name1", "address1", "neighborhood1")));
+        petPOJOList.add(new PetPOJO(2, "microship3", "name3", "species3", "race3", "size3", "sex3", "../photos/pet3.jpg", new ProprietaryPOJO("Username2", 2, "name2", "address2", "neighborhood2")));
+        petPOJOList.add(new PetPOJO(3, "microship4", "name4", "species4", "race4", "size4", "sex4", "../photos/pet4.jpg", new ProprietaryPOJO("Username3", 3, "name3", "address3", "neighborhood3")));
     }
 
     public void setCases(){
@@ -39,6 +41,21 @@ public class Data {
         casePOJOList.add(new CasePOJO(0, "date1", "stole", "desciption1", 1));
         casePOJOList.add(new CasePOJO(0, "date2", "decease", "desciption2", 2));
     }
+
+    public void setVets(){
+        setVisits();
+        veterinaryPOJOList.add((new VeterinaryPOJO("username1", "vet1", "addres1", "neighborhood1", visitPOJOList)));
+        veterinaryPOJOList.add((new VeterinaryPOJO("username2", "vet2", "addres2", "neighborhood2", visitPOJOList)));
+        veterinaryPOJOList.add((new VeterinaryPOJO("username3", "vet3", "addres3", "neighborhood3", visitPOJOList)));
+    }
+
+    public void setVisits(){
+        visitPOJOList.add(new VisitPOJO(1, "date1", "type1", "desciption1", "username1", 1, ""));
+        visitPOJOList.add(new VisitPOJO(2, "date2", "type2", "desciption2", "username2", 3, ""));
+        visitPOJOList.add(new VisitPOJO(2, "date3", "type3", "desciption3", "username3", 3, ""));
+    }
+
+    //GETTERS ----- SETTERS
 
     public List<ProprietaryPOJO> getProprietaryPOJOList() {
         return proprietaryPOJOList;

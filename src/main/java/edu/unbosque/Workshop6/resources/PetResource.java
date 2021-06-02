@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("/pets")
+@Path("/proprietary/{id}/pets")
 public class PetResource {
 
     private Data data= new Data();
@@ -57,6 +57,22 @@ public class PetResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response modify(@PathParam("id") int id, PetPOJO petPOJO){
+        petPOJO.setId(id);
         return Response.status(Response.Status.OK).entity(petPOJO).build();
+    }
+
+    @GET
+    @Path("/{id}/image")
+    @Produces(MediaType.TEXT_HTML)
+    public String showPhoto(@PathParam("id") int id){
+        for (PetPOJO pet :
+                data.getPetPOJOList()) {
+            if (pet.getId() == id) {
+                //return Response.status(Response.Status.OK).entity(pet.getPicture()).build();
+                return "<img src=\""+pet.getPicture()+"\" alt=\"pet"+id +"\" width=\"500\" height=\"600\">";
+            }
+        }
+        //return Response.status(Response.Status.OK).entity(null).build();
+        return "";
     }
 }
