@@ -9,18 +9,18 @@ public class VisitPOJO {
     private String createdAt;
     private String type;
     private String description;
-    private String veterinaryId;
+    private VeterinaryPOJO vet;
     private int petId;
     private String microship;
 
     public VisitPOJO(){}
 
-    public VisitPOJO(int id, String createdAt, String type, String description, String veterinaryId, int petId, String microship) {
+    public VisitPOJO(int id, String createdAt, String type, String description, VeterinaryPOJO vet, int petId, String microship) {
         this.id = id;
         this.createdAt = createdAt;
         this.type = type;
         this.description = description;
-        this.veterinaryId = veterinaryId;
+        this.vet = vet;
         this.petId = petId;
         this.microship = microship;
     }
@@ -57,12 +57,12 @@ public class VisitPOJO {
         this.description = description;
     }
 
-    public String getVeterinaryId() {
-        return veterinaryId;
+    public VeterinaryPOJO getVet() {
+        return vet;
     }
 
-    public void setVeterinaryId(String veterinaryId) {
-        this.veterinaryId = veterinaryId;
+    public void setVet(VeterinaryPOJO vet) {
+        this.vet = vet;
     }
 
     public int getPetId() {
