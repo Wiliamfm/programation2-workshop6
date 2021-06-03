@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "a7033ac9-f408-4655-84b7-f88fc513915a",
+		"name": "Workshop6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Punto 1 - Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username\",\r\n    \"id\": 0,\r\n    \"name\": \"name\",\r\n    \"address\": \"address\",\r\n    \"neighborhood\": \"neighborhood\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 1 - Modificar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username\",\r\n    \"name\": \"name\",\r\n    \"address\": \"address\",\r\n    \"neighborhood\": \"neighborhood\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 2 - Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"microship\": \"microship\",\r\n    \"name\": \"name\",\r\n    \"specie\": \"specie\",\r\n    \"race\": \"race\",\r\n    \"size\": \"size\",\r\n    \"sex\": \"sex\",\r\n    \"picture\": \"picture\",\r\n    \"owner\": {\r\n            \"username\": \"username\",\r\n            \"name\": \"name\",\r\n            \"id\": 2,\r\n            \"address\": \"address\",\r\n            \"neighborhood\": \"neighborhood\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/2/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"2",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 2 - Modificar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"microship\": \"microship\",\r\n    \"name\": \"name\",\r\n    \"specie\": \"specie\",\r\n    \"race\": \"race\",\r\n    \"size\": \"size\",\r\n    \"sex\": \"sex\",\r\n    \"picture\": \"picture\",\r\n    \"owner\": {\r\n            \"username\": \"username\",\r\n            \"name\": \"name\",\r\n            \"id\": 2,\r\n            \"address\": \"address\",\r\n            \"neighborhood\": \"neighborhood\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/32/pets/333",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"32",
+						"pets",
+						"333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/32/pets/0/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"32",
+						"pets",
+						"0",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 4 - Filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/name2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"name2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/0/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"0",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 5 - Filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/0/pets/size3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"0",
+						"pets",
+						"size3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"createdAt\": \"createdAt\",\r\n    \"type\": \"stole\",\r\n    \"description\":\"description\",\r\n    \"petId\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/proprietary/32/pets/0/cases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"proprietary",
+						"32",
+						"pets",
+						"0",
+						"cases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username\",\r\n    \"name\": \"name\",\r\n    \"address\": \"address\",\r\n    \"neighborhood\": \"neighborhood\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/veterinary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"veterinary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 7 - Modificar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"modifyName\",\r\n    \"address\": \"modify address\",\r\n    \"neighborhood\": \"modify neighborhood\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/veterinary/usernameP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"veterinary",
+						"usernameP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 8",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 9,\r\n    \"createdAt\": \"createdAt\",\r\n    \"type\": \"implantación\",\r\n    \"description\": \"description\",\r\n    \"petId\": 0,\r\n    \"vet\": {\r\n        \"username\": \"username\",\r\n        \"name\": \"name\",\r\n        \"addres\": \"addres\",\r\n        \"neighborhood\": \"neighborhood\"\r\n    },\r\n    \"microship\": \"microship\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/veterinary/visit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"veterinary",
+						"visit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/show/owners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"show",
+						"owners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/show/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"show",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/show/cases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"show",
+						"cases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Workshop6-1.0-SNAPSHOT/workshop6/show/visits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Workshop6-1.0-SNAPSHOT",
+						"workshop6",
+						"show",
+						"visits"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
